@@ -1,0 +1,8 @@
+<h5><%= link_to('Home', {controller: :books}) %></h5>
+
+<h1>Editing Book</h1>
+
+<%= render 'form', book: @book %>
+
+<%= link_to 'Show', @book %> |
+<%= link_to 'Back', books_path %>
