@@ -56,16 +56,17 @@ Virgin Mobile           vmobl.com
 
 def sql_get_numbers():
     query="select number from students"
-    db_usr="test_app"
-    db_pwd="test_password"
+    db_usr=os.environ['DATABASE_USER']#"test_app"
+    db_pwd=os.environ['DATABASE_PASSWORD']#"test_password"
     db_name="test_excel_development"
     #setting up a .pgpass file to prevent psql from pompting us for a password
     os.system('echo \'localhost:*:'+db_name+':'+db_usr+':'+db_pwd+'\' > ~/.pgpass')
     #psql expects .pgpass to have the following permissions
     os.system('chmod 0600 ~/.pgpass')
-    #pipe the query into pql and write the result to a temporary file
-    os.system('echo \''+query+';\' | psql -h localhost -U '+db_usr+' '+db_name+' > tmp_query')
-    with open("tmp_query") as fd:
+    #pipe the query into psql and write the result to a temporary file
+    os.system('echo \''+query+';\' | psql -h localhost -U '+db_usr+' '+db_name+' > /tmp/tmp_query')
+    with open("/tmp/tmp_query") as fd:
+        #read the query result from the temporary file
         raw=fd.read()
         #extract 10 digit numbers and put them in an array
         return re.findall(r'\b\d\d\d\d\d\d\d\d\d\d\b',raw)

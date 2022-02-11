@@ -5934,3 +5934,121 @@ Processing by PosttextController#posttext as HTML
 Completed 200 OK in 206ms (Views: 197.0ms | ActiveRecord: 0.0ms | Allocations: 9325)
 
 
+Started GET "/posttext?textmsg=test+with+environment+variables" for 172.17.0.1 at 2022-02-11 09:08:53 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PosttextController#posttext as HTML
+  Parameters: {"textmsg"=>"test with environment variables"}
+Redirected to http://127.0.0.1:3000/posttext
+Completed 302 Found in 1478ms (ActiveRecord: 0.0ms | Allocations: 1725)
+
+
+Started GET "/posttext" for 172.17.0.1 at 2022-02-11 09:08:55 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PosttextController#posttext as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posttext/posttext.html.erb within layouts/application
+  Rendered posttext/posttext.html.erb within layouts/application (Duration: 83.2ms | Allocations: 609)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 909.8ms | Allocations: 6984)
+Completed 200 OK in 1019ms (Views: 952.8ms | ActiveRecord: 0.0ms | Allocations: 9326)
+
+
+Started GET "/posttext?textmsg=another+test" for 172.17.0.1 at 2022-02-11 09:14:46 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PosttextController#posttext as HTML
+  Parameters: {"textmsg"=>"another test"}
+Redirected to http://127.0.0.1:3000/posttext
+Completed 302 Found in 1412ms (ActiveRecord: 0.0ms | Allocations: 1726)
+
+
+Started GET "/posttext" for 172.17.0.1 at 2022-02-11 09:14:48 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PosttextController#posttext as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posttext/posttext.html.erb within layouts/application
+  Rendered posttext/posttext.html.erb within layouts/application (Duration: 8.6ms | Allocations: 609)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 156.4ms | Allocations: 6983)
+Completed 200 OK in 191ms (Views: 180.2ms | ActiveRecord: 0.0ms | Allocations: 9325)
+
+
+Started GET "/posttext?textmsg=sasjnndsnjsnjnjdjndsnjsjkasmksmlsmkslmsmasmksncnsksmsxmsklaxskxskxmsmmmmmmmmmmmmmmskmssmkxsxsmmsnscnjdsnjndsjndjndjsksdnjkndjsdsnjnsjdsdnjksndjdnjcnnsdndjdnsjdnsjkndnjdsknj" for 172.17.0.1 at 2022-02-11 09:17:28 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PosttextController#posttext as HTML
+  Parameters: {"textmsg"=>"sasjnndsnjsnjnjdjndsnjsjkasmksmlsmkslmsmasmksncnsksmsxmsklaxskxskxmsmmmmmmmmmmmmmmskmssmkxsxsmmsnscnjdsnjndsjndjndjsksdnjkndjsdsnjnsjdsdnjksndjdnjcnnsdndjdnsjdnsjkndnjdsknj"}
+Redirected to http://127.0.0.1:3000/posttext/?failed=1
+Redirected to 
+Completed 500 Internal Server Error in 231ms (ActiveRecord: 0.0ms | Allocations: 2136)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/posttext_controller.rb:14:in `posttext'
+Started GET "/posttext" for 172.17.0.1 at 2022-02-11 09:18:36 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PosttextController#posttext as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posttext/posttext.html.erb within layouts/application
+  Rendered posttext/posttext.html.erb within layouts/application (Duration: 9.3ms | Allocations: 626)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 159.1ms | Allocations: 6988)
+Completed 200 OK in 217ms (Views: 185.6ms | ActiveRecord: 0.0ms | Allocations: 10640)
+
+
+Started GET "/posttext?textmsg=%3Ftextmsg%3Dsasjnndsnjsnjnjdjndsnjsjkasmksmlsmkslmsmasmksncnsksmsxmsklaxskxskxmsmmmmmmmmmmmmmmskmssmkxsxsmmsnscnjdsnjndsjndjndjsksdnjkndjsdsnjnsjdsdnjksndjdnjcnnsdndjdnsjdnsjkndnjdsknj" for 172.17.0.1 at 2022-02-11 09:19:13 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PosttextController#posttext as HTML
+  Parameters: {"textmsg"=>"?textmsg=sasjnndsnjsnjnjdjndsnjsjkasmksmlsmkslmsmasmksncnsksmsxmsklaxskxskxmsmmmmmmmmmmmmmmskmssmkxsxsmmsnscnjdsnjndsjndjndjsksdnjkndjsdsnjnsjdsdnjksndjdnjcnnsdndjdnsjdnsjkndnjdsknj"}
+Redirected to http://127.0.0.1:3000/posttext/?failed=1
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms | Allocations: 392)
+
+
+Started GET "/posttext/?failed=1" for 172.17.0.1 at 2022-02-11 09:19:14 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PosttextController#posttext as HTML
+  Parameters: {"failed"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering posttext/posttext.html.erb within layouts/application
+  Rendered posttext/posttext.html.erb within layouts/application (Duration: 1.3ms | Allocations: 122)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 64.8ms | Allocations: 3596)
+Completed 200 OK in 71ms (Views: 69.5ms | ActiveRecord: 0.0ms | Allocations: 4106)
+
+
+Started GET "/posttext?textmsg=shhshshhshhshshsshsh" for 172.17.0.1 at 2022-02-11 09:19:25 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PosttextController#posttext as HTML
+  Parameters: {"textmsg"=>"shhshshhshhshshsshsh"}
+Redirected to http://127.0.0.1:3000/posttext
+Completed 302 Found in 1346ms (ActiveRecord: 0.0ms | Allocations: 294)
+
+
+Started GET "/posttext" for 172.17.0.1 at 2022-02-11 09:19:26 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PosttextController#posttext as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posttext/posttext.html.erb within layouts/application
+  Rendered posttext/posttext.html.erb within layouts/application (Duration: 2.2ms | Allocations: 105)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 81.7ms | Allocations: 3457)
+Completed 200 OK in 89ms (Views: 87.2ms | ActiveRecord: 0.0ms | Allocations: 3921)
+
+
+Started GET "/students" for 172.17.0.1 at 2022-02-11 09:20:00 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (3.5ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."first" ASC[0m
+  ↳ app/views/students/index.html.erb:23
+  Rendered students/index.html.erb within layouts/application (Duration: 183.6ms | Allocations: 5768)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 260.5ms | Allocations: 9305)
+Completed 200 OK in 695ms (Views: 263.3ms | ActiveRecord: 14.7ms | Allocations: 12530)
+
+
