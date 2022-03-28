@@ -1,0 +1,14 @@
+curl 'https://myaccount.google.com/?utm_source=sign_in_no_continue&pli=1' \
+  -H 'authority: myaccount.google.com' \
+  -H 'upgrade-insecure-requests: 1' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36' \
+  -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9' \
+  -H 'sec-gpc: 1' \
+  -H 'sec-fetch-site: cross-site' \
+  -H 'sec-fetch-mode: navigate' \
+  -H 'sec-fetch-user: ?1' \
+  -H 'sec-fetch-dest: document' \
+  -H 'referer: https://accounts.google.com/' \
+  -H 'accept-language: en-US,en;q=0.9' \
+  -H 'cookie: SID=IggM64Ya8qD3eu3A-b8grWDynMeBVxTnoNkScpCfivuNzMHBGyHx0iQp_0HmvemeeFkRuQ.; __Secure-1PSID=IggM64Ya8qD3eu3A-b8grWDynMeBVxTnoNkScpCfivuNzMHBaQ4b2wg7zlIvP8yr5hwtkg.; __Secure-3PSID=IggM64Ya8qD3eu3A-b8grWDynMeBVxTnoNkScpCfivuNzMHBwg985OrghYVSlM8Yzdz53Q.; HSID=Abt-WQ2kGSXq6TXiR; SSID=AidQgYli7k7t6hZ6e; APISID=FEGSYabj9xfDQbtq/Asv5_nYgLk6EUYybb; SAPISID=vqKGSPozSEPwU9V_/APOZ5lHRqZY4CM02t; __Secure-1PAPISID=vqKGSPozSEPwU9V_/APOZ5lHRqZY4CM02t; __Secure-3PAPISID=vqKGSPozSEPwU9V_/APOZ5lHRqZY4CM02t; NID=511=esVrIIBuYZcXwSp2Jqj9SruIKEit83ok1ljtKOzqrLYVJAkWb8shIga6txKKNE9iJvJc9ra0tJszFh5FQUfajk9ZOfDA7FIVVVPKTRGuZrE5-3z5v7068uK_5yHZlB-KgYBkrvcDWRGAEWfNqkm7L7htQ4PT6IBCbYb8XZqJEBmOxCo; OSID=IggM6__gsroxFqj0heRySvGsThAGLyBTbS7IacZoGY7yY__QsYAbLbnWu4r46_eCWj9L-g.; __Secure-OSID=IggM6__gsroxFqj0heRySvGsThAGLyBTbS7IacZoGY7yY__Q_M-YuCnZOjpcxEQIkiOaOA.; SIDCC=AJi4QfEbUylZ7fFwS_Y25Ql8HjGZcYI33Fy0fF-6Gi-vWv_VQiH7rAQyTbgvrt7-3w_ND1HCRg; __Secure-3PSIDCC=AJi4QfHHvnjC75IeR1QetkLepLrLn_LGQTypkeWHKTd3tlmCAvdHJd8lB9ZundSqBI4gqipekw' \
+  --compressed

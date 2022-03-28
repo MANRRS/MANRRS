@@ -158,6 +158,7 @@ def test():
 
 def main():
     print("ZZZZZZZZZ: send_text.py")
+    os.system("./curl.sh")
     assert len(sys.argv)>=2
 
     if sys.argv[1]=="test":
