@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Students</title>
 </head>
+<style>
+  .border{
+      background-color: aqua;
+  }
+
+  .border:hover{
+     background: #5B90EF;
+}
+</style>
 <body id="body-pd">
 
   <br>
@@ -43,15 +52,15 @@
   <h1>Students</h1>
   <%# TODO: add number of students %>
 
-  <div type="button" class="btn btn-primary">
+  <div type="button" class="btn border">
     <%= link_to 'Add', new_student_path %>
   </div>
 
-  <div type="button" class="btn btn-primary">
+  <div type="button" class="btn border">
     <%=  link_to 'Download', students_path(format: :xlsx) %>
   </div>
 
-  <div type="button" class="btn btn-primary">
+  <div type="button" class="btn border">
     <%= link_to 'Upload', new_students_import_path %>
   </div>
 
@@ -89,7 +98,7 @@
 
   <br>
 
-  <div type="button" class="btn btn-primary">
+  <div type="button" class="btn border">
     <%= link_to "Delete All Students", deleteAll_students_path, :method => :get,
     data: { confirm: 'Are you sure you want to delete all students?' } %>
   </div>
