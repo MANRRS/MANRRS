@@ -56,14 +56,16 @@
 
     <tbody>
       <% @message_histories.each do |message_history| %>
+       <% @students.each do |student| %>
         <tr>
           <td><%= message_history.message_id %></td>
           <td><%= message_history.date_sent %></td>
           <td><%= message_history.student_id %></td>
-          <td><%= link_to 'Show', message_history %></td>
+          <td><%= link_to 'Show', message_history, student %></td>
           <td><%= link_to 'Edit', edit_message_history_path(message_history) %></td>
           <td><%= link_to 'Destroy', message_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
+      <% end %>
       <% end %>
     </tbody>
   </table>
