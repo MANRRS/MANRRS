@@ -12,7 +12,7 @@
 
 <p>
   <strong>Student:</strong>
-  <%= @message_history.student_id %>
+  <%= @students.First_Name.where(id = message_history.student_id) %>
 </p>
 
 <%= link_to 'Edit', edit_message_history_path(@message_history) %> |
