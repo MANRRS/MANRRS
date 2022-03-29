@@ -99,10 +99,9 @@ def sql_get_carriers():
 
 
 def sql_get_student_ids():
-    query='select id from students'
+    query='select First_Name, Last_Name from students'
     raw=sql_exec(query)
-    nums=re.findall(r'\b\d+\b',raw)
-    if len(nums)>1: del nums[-1]
+    nums=re.findall(r'\b[a-z]+(?:\.[a-z]+)+\b',raw)
     return nums;
 
 def sql_get_max_message_id():
