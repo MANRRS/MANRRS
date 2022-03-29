@@ -99,7 +99,7 @@ def sql_get_carriers():
 
 
 def sql_get_student_ids():
-    query='select First_Name, Last_Name from students'
+    query='select First_Name from students'
     raw=sql_exec(query)
     nums=re.findall(r'\b[a-z]+(?:\.[a-z]+)+\b',raw)
     return nums;
