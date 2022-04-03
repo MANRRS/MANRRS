@@ -7,8 +7,9 @@
 
 :root {
     --header-height: 3rem;
-    --nav-width: 150px;
-    --first-color: #4723D9;
+    --nav-width: 68px;
+    --first-color: #b79945;
+    --secondary-color: #c99738; // #a5782b;    
     --first-color-light: #AFA5D9;
     --white-color: #F7F6FB;
     --body-font: 'Nunito', sans-serif;
@@ -206,12 +207,14 @@ a {
 // login
 .gradient-custom {
     /* fallback for old browsers */
-    background: #4723D9;
+    background: #000000;
 
     /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, #4723D9, rgba(37, 117, 252, 1));
+    background: -webkit-linear-gradient(to right, var(---first-color), var(--secondary-color));
   
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, #4723D9, rgba(37, 117, 252, 1));
+    background: linear-gradient(to right, var(--first-color), var(--secondary-color));
 
   }
+
+  
