@@ -41,7 +41,6 @@
   <p>Download this template and have students fill it out. Then, reupload the template.</p>
 
   <%= button_to 'Download', students_path(format: :xlsx), :class => "button", :method => :get  %>
-  <br>
   <%= button_to "Upload", new_students_import_path, :class => "button", :method => :get  %>
 
   <br>
@@ -77,10 +76,7 @@
   </table>
 
   <br>
-
-
   <%= button_to 'Add Student', new_student_path, :class => "button", :method => :get  %>
-  <br>
   <%= button_to "Delete All", deleteAll_students_path, :method => :get,
     data: { confirm: 'Are you sure you want to delete all students?' } %>
 
