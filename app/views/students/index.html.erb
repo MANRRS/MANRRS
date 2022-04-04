@@ -40,13 +40,9 @@
   <h1>Students</h1>
   <p>Download this template and have students fill it out. Then, reupload the template.</p>
 
-  <div type="button" class="btn btn-primary">
-    <%=  link_to 'Download', students_path(format: :xlsx) %>
-  </div>
-
-  <div type="button" class="btn btn-primary">
-    <%= link_to 'Upload', new_students_import_path %>
-  </div>
+  <%= button_to 'Download', students_path(format: :xlsx), :class => "button", :method => :get  %>
+  <br>
+  <%= button_to "Upload", new_students_import_path, :class => "button", :method => :get  %>
 
   <br>
   <br>
@@ -82,14 +78,11 @@
 
   <br>
 
-  <div type="button" class="btn btn-primary">
-    <%= link_to 'Add Student', new_student_path %>
-  </div>
 
-  <div type="button" class="btn btn-primary">
-    <%= link_to "Delete All", deleteAll_students_path, :method => :get,
+  <%= button_to 'Add Student', new_student_path, :class => "button", :method => :get  %>
+  <br>
+  <%= button_to "Delete All", deleteAll_students_path, :method => :get,
     data: { confirm: 'Are you sure you want to delete all students?' } %>
-  </div>
 
 </body>
 </html>

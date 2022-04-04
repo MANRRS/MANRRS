@@ -2,5 +2,5 @@
 
 <%= render 'form', message: @message %>
 
-<%= link_to 'Show', @message %> |
-<%= link_to 'Back', messages_path %>
+<%= button_to "Show", @message, :class => "button", :method => :get  %> |
+<%= link_to '<button type="button">Back</button>'.html_safe, messages_path %>
