@@ -136,16 +136,13 @@ a {
     font-size: 1.25rem
 }
 
-.show-nav {
+.show {
     left: 0
 }
 
 .body-pd {
     padding-left: calc(var(--nav-width) + 1rem)
 }
-
-
-
 
 .body-sec {
     width: 100%;
@@ -184,21 +181,21 @@ a {
         padding: 0 2rem 0 calc(var(--nav-width) + 2rem)
     }
 
-    // .header_img {
-    //     width: 40px;
-    //     height: 40px
-    // }
+    .header_img {
+        width: 40px;
+        height: 40px
+    }
 
-    // .header_img img {
-    //     width: 45px
-    // }
+    .header_img img {
+        width: 45px
+    }
 
     .l-navbar {
         left: 0;
         padding: 1rem 1rem 0 0
     }
 
-    .show-nav {
+    .show {
         width: calc(var(--nav-width) + 156px)
     }
 
@@ -210,10 +207,10 @@ a {
 // login
 .gradient-custom {
     /* fallback for old browsers */
-    background: var(--first-color);
+    background: #000000;
 
     /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, var(--first-color), var(--secondary-color));
+    background: -webkit-linear-gradient(to right, var(---first-color), var(--secondary-color));
   
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to right, var(--first-color), var(--secondary-color));
