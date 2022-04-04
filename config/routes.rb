@@ -24,4 +24,7 @@ Rails.application.routes.draw do
    get 'home/dashboard'
    get 'home/homepage'
    root 'posttext#posttext'
+
+   get  "help",to:"help#index"
+
 end
