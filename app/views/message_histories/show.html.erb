@@ -15,5 +15,5 @@
   <%= @message_history.student_id %>
 </p>
 
-<%= link_to 'Edit', edit_message_history_path(@message_history) %> |
+<%= link_to '<button type="button">Edit</button>'.html_safe, edit_message_history_path(@message_history) %> |
 <%= link_to '<button type="button">Back</button>'.html_safe, message_histories_path %>
