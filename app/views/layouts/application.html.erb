@@ -16,8 +16,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
 
-  </head>
 
+<<<<<<< HEAD
   <body>
     
   <body id="body-pd">
@@ -43,15 +43,28 @@
       </nav>
     </div>
   </body>
+=======
+    <%# include script? %>
 
-  <br>
-  <br>
-  <br>
-  <br>
+  </head>
 
-  <p id="notice"><%= notice %></p>
+  <body>
+
+      <%# <% if user_signed_in? %>
+>>>>>>> parent of 7d97fa5b (NavBar Code moved to Application.html)
+
+        <%# <%= current_user.email 
+        <%= link_to 'Log out', destroy_user_session_path, method: :delete 
+        <%= link_to 'Account Settings', edit_user_registration_path 
+
+      <% else 
+         <%= link_to 'Log in', new_user_session_path 
+         <%= link_to 'Sign up', new_user_registration_path 
+      <% end 
       
-  <%= yield %>
+      %> 
+      
+    <%= yield %>
 
   </body>
 </html>
