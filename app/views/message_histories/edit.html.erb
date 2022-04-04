@@ -2,5 +2,5 @@
 
 <%= render 'form', message_history: @message_history %>
 
-<%= link_to 'Show', @message_history %> |
-<%= link_to 'Back', message_histories_path %>
+<%= link_to '<button type="button">Show</button>'.html_safe, @message_history %> |
+<%= link_to '<button type="button">Back</button>'.html_safe, message_histories_path %>
