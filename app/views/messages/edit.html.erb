@@ -1,5 +1,6 @@
 <h1>Editing Message</h1>
 
 <%= render 'form', message: @message %>
-<%= button_to "Show", @message, :class => "button", :method => :get  %>
+
+<%= link_to '<button type="button">Edit</button>'.html_safe, @message %> |
 <%= link_to '<button type="button">Back</button>'.html_safe, messages_path %>

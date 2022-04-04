@@ -38,13 +38,9 @@
     <br>
 
     <h1>Add New Student</h1>
-    <%= render 'form', student: @student %>
+    <%= render 'form', student: @student %> 
+    <%= button_to  'Back', students_path, :class => "button", :method => :get  %>
 
-    <br>
-
-    <div type="button" class="btn btn-primary">
-        <%= link_to 'Back', students_path %>
-    </div>
 
 
 </body>
