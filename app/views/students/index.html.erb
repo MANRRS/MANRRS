@@ -14,7 +14,7 @@
   <table class="table table-striped">
     <thead>
       <tr>
-        <%# <th>StudentID</th> %>
+        <th>StudentID</th>
         <th>First name</th>
         <th>Last name</th>
         <th>Phone number</th>
@@ -26,8 +26,7 @@
     <tbody>
       <% @students.each do |student| %>
         <tr>
-          <%# <td><%= student.id </td> %>
-          <%# <td><%= student.Student_ID</td> %>
+          <td><%= student.id %></td>
           <td><%= student.First_Name %></td>
           <td><%= student.Last_Name %></td>
           <td><%= student.Phone_Number %></td>
