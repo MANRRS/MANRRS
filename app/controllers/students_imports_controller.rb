@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class StudentsImportsController < ApplicationController
   def new
     @students_import = StudentsImport.new
@@ -11,5 +13,4 @@ class StudentsImportsController < ApplicationController
       render :new
     end
   end
-
 end
