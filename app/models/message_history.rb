@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MessageHistory < ApplicationRecord
   validates :student_id, presence: true
   validates :message_id, presence: true

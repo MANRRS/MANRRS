@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class MessageHistoriesController < ApplicationController
-  before_action :set_message_history, only: %i[ show edit update destroy ]
+  before_action :set_message_history, only: %i[show edit update destroy]
 
   # GET /message_histories or /message_histories.json
   def index
@@ -7,8 +9,7 @@ class MessageHistoriesController < ApplicationController
   end
 
   # GET /message_histories/1 or /message_histories/1.json
-  def show
-  end
+  def show; end
 
   # GET /message_histories/new
   def new
@@ -16,8 +17,7 @@ class MessageHistoriesController < ApplicationController
   end
 
   # GET /message_histories/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /message_histories or /message_histories.json
   def create
@@ -25,7 +25,9 @@ class MessageHistoriesController < ApplicationController
 
     respond_to do |format|
       if @message_history.save
-        format.html { redirect_to message_history_url(@message_history), notice: "Message history was successfully created." }
+        format.html do
+          redirect_to message_history_url(@message_history), notice: 'Message history was successfully created.'
+        end
         format.json { render :show, status: :created, location: @message_history }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +40,9 @@ class MessageHistoriesController < ApplicationController
   def update
     respond_to do |format|
       if @message_history.update(message_history_params)
-        format.html { redirect_to message_history_url(@message_history), notice: "Message history was successfully updated." }
+        format.html do
+          redirect_to message_history_url(@message_history), notice: 'Message history was successfully updated.'
+        end
         format.json { render :show, status: :ok, location: @message_history }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +56,20 @@ class MessageHistoriesController < ApplicationController
     @message_history.destroy
 
     respond_to do |format|
-      format.html { redirect_to message_histories_url, notice: "Message history was successfully destroyed." }
+      format.html { redirect_to message_histories_url, notice: 'Message history was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_message_history
-      @message_history = MessageHistory.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def message_history_params
-      params.require(:message_history).permit(:message_id, :date_sent, :student_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_message_history
+    @message_history = MessageHistory.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def message_history_params
+    params.require(:message_history).permit(:message_id, :date_sent, :student_id)
+  end
 end
