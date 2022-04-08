@@ -14,9 +14,7 @@
     <% @masterkeys.each do |masterkey| %>
       <tr>
         <td><%= masterkey.key %></td>
-        <td><%= link_to 'Show', masterkey %></td>
-        <td><%= link_to 'Edit', edit_masterkey_path(masterkey) %></td>
-        <td><%= link_to 'Destroy', masterkey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '<i class="bx bx-pencil nav_icon"></i>'.html_safe, edit_masterkey_path(masterkey) %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +22,3 @@
 
 <br>
 
-<%= link_to 'New Masterkey', new_masterkey_path %>
