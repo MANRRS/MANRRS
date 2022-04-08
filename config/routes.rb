@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :masterkeys
   resources :message_histories
   resources :messages
   # resources :students

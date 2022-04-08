@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Masterkeys</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @masterkeys.each do |masterkey| %>
+      <tr>
+        <td><%= masterkey.key %></td>
+        <td><%= link_to 'Show', masterkey %></td>
+        <td><%= link_to 'Edit', edit_masterkey_path(masterkey) %></td>
+        <td><%= link_to 'Destroy', masterkey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Masterkey', new_masterkey_path %>
