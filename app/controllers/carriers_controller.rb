@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class CarriersController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_carrier, only: %i[show edit update destroy]
 
   # GET /carriers or /carriers.json

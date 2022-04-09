@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class MessageHistoriesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_message_history, only: %i[show edit update destroy]
 
   # GET /message_histories or /message_histories.json

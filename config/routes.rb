@@ -16,7 +16,9 @@ Rails.application.routes.draw do
   get 'students_imports/new'
   get 'students_imports/create'
 
-  devise_for :users
+  
+  # devise_for :users
+  devise_for :users, :controllers => { :registrations => 'user' }
   
   resources :message_histories
   resources :carriers

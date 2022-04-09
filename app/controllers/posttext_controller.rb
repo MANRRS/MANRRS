@@ -3,6 +3,7 @@
 puts 'ZZZZZZZZ: PosttextController'
 
 class PosttextController < ApplicationController
+  before_action :authenticate_user!
   def posttext
     print 'XXXXXXXXX: post ', params['textmsg'], '\n'
     if params['textmsg']

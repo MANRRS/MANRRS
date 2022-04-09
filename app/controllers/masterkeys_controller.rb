@@ -1,4 +1,5 @@
 class MasterkeysController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_masterkey, only: %i[ show edit update destroy ]
 
   # GET /masterkeys or /masterkeys.json
