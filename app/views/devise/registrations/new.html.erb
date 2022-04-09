@@ -104,11 +104,8 @@ function myFunction(){
   var x = document.getElementById("Myid");
   var userInput = document.getElementById("input");
   var secret = document.getElementById("secret");
-  const secretKey = "key123!"
-  if (x.style.display === "none" && userInput.value == secretKey) {
-    x.style.display = "block";
-    secret.style.display = "none"
-}
+  document.cookie="maspas="+userInput.value;
+  alert(userInput);
 }
 </script>
 
