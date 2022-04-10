@@ -4,6 +4,11 @@ class Student < ApplicationRecord
   validates :Phone_Number, presence: true
   # :uniqueness => true
 
+  def Phone_Number=(value)
+    value = stripDigits(stripNonIntegers(value.to_s)).to_i
+    super(value)
+  end
+  
   def stripWhitespace(s)
     s.gsub(/\s+/, '')
   end
