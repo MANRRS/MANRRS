@@ -61,7 +61,7 @@ RSpec.describe MessageHistory, type: :model do
 end
 
 # location: spec/unit/unit_spec.rb
-require 'rails_helper'
+
 
 RSpec.describe User, type: :model do
   subject do
@@ -86,7 +86,6 @@ RSpec.describe User, type: :model do
 end
 
 # UNIT TEST: Student
-require 'rails_helper'
 require 'student'
 
 RSpec.describe Student do

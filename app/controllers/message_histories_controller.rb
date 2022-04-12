@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# comment
 class MessageHistoriesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_message_history, only: %i[show edit update destroy]
@@ -23,7 +24,6 @@ class MessageHistoriesController < ApplicationController
   # POST /message_histories or /message_histories.json
   def create
     @message_history = MessageHistory.new(message_history_params)
-
     respond_to do |format|
       if @message_history.save
         format.html do

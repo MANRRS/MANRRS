@@ -9,15 +9,15 @@ class Student < ApplicationRecord
     super(value)
   end
 
-  def stripWhitespace(s)
-    s.gsub(/\s+/, '')
+  def stripWhitespace(str)
+    str.gsub(/\s+/, '')
   end
 
-  def stripNonIntegers(s)
-    s.tr('^0-9', '')
+  def stripNonIntegers(str)
+    str.tr('^0-9', '')
   end
 
-  def stripDigits(s)
-    s[-10..] || s
+  def stripDigits(str)
+    str[-10..] || str
   end
 end
