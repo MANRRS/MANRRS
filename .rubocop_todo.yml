@@ -68,9 +68,11 @@ Layout/LeadingCommentSpace:
   Enabled: false
 Layout/TrailingEmptyLines:
   Enabled: false
+Layout/TrailingWhitespace:
+  Enabled: false
 
 
-  
+
 # Offense count: 1
 # Configuration parameters: MinBodyLength.
 Style/GuardClause:
