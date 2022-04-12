@@ -1,0 +1,22 @@
+<%= form_with(model: masterkey) do |form| %>
+  <% if masterkey.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(masterkey.errors.count, "error") %> prohibited this masterkey from being saved:</h2>
+
+      <ul>
+        <% masterkey.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :key %>
+    <%= form.text_field :key %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

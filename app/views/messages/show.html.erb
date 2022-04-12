@@ -15,5 +15,12 @@
   <%= @message.date_created %>
 </p>
 
-<%= link_to 'Edit', edit_message_path(@message) %> |
-<%= link_to 'Back', messages_path %>
+
+<%= link_to '<button type="button">Edit</button>'.html_safe, edit_message_path(@message) %> |
+<%= link_to '<button type="button">Back</button>'.html_safe, messages_path %>
+
+<script>
+	// highlight the current page
+	var element = document.getElementById("4");
+	element.classList.add("active");
+</script>

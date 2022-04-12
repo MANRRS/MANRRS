@@ -1,0 +1,12 @@
+<h1>Editing Masterkey</h1>
+
+<%= render 'form', masterkey: @masterkey %>
+
+<%= link_to '<button type="button">Edit</button>'.html_safe, @masterkey %> |
+<%= link_to '<button type="button">Back</button>'.html_safe, masterkeys_path %>
+
+<script>
+	// highlight the current page
+	var element = document.getElementById("5");
+	element.classList.add("active");
+</script>

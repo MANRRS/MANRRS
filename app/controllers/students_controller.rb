@@ -1,22 +1,24 @@
+# frozen_string_literal: true
+
 class StudentsController < ApplicationController
-  before_action :set_student, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
+  before_action :set_student, only: %i[show edit update destroy]
 
   # GET /students or /students.json
   def index
     @students = Student.all
     respond_to do |format|
-      format.xlsx {
+      format.xlsx do
         response.headers[
           'Content-Disposition'
-        ] = "attachment; filename=students.xlsx"
-      }
+        ] = 'attachment; filename=students.xlsx'
+      end
       format.html { render :index }
     end
   end
-  
+
   # GET /students/1 or /students/1.json
-  def show
-  end
+  def show; end
 
   # GET /students/new
   def new
@@ -31,11 +33,7 @@ class StudentsController < ApplicationController
   end
 
   # GET /students/1/edit
-  def edit
-  end
-
-
-
+  def edit; end
 
   # POST /students or /students.json
   def create
@@ -43,7 +41,7 @@ class StudentsController < ApplicationController
 
     respond_to do |format|
       if @student.save
-        format.html { redirect_to student_url(@student), notice: "Student was successfully created." }
+        format.html { redirect_to student_url(@student), notice: 'Student was successfully created.' }
         format.json { render :show, status: :created, location: @student }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -56,7 +54,7 @@ class StudentsController < ApplicationController
   def update
     respond_to do |format|
       if @student.update(student_params)
-        format.html { redirect_to student_url(@student), notice: "Student was successfully updated." }
+        format.html { redirect_to student_url(@student), notice: 'Student was successfully updated.' }
         format.json { render :show, status: :ok, location: @student }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -70,20 +68,21 @@ class StudentsController < ApplicationController
     @student.destroy
 
     respond_to do |format|
-      format.html { redirect_to students_url, notice: "Student was successfully destroyed." }
+      format.html { redirect_to students_url, notice: 'Student was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
 
-    def set_student
-      @student = Student.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
 
-    # Only allow a list of trusted parameters through.
-    def student_params
-      params.require(:student).permit(:Student_ID, :First_Name, :Last_Name, :Phone_Number, :Email)
-    end
+  def set_student
+    @student = Student.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def student_params
+    params.require(:student).permit(:First_Name, :Last_Name, :Phone_Number, :Email)
+  end
 end

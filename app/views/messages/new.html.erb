@@ -2,4 +2,11 @@
 
 <%= render 'form', message: @message %>
 
-<%= link_to 'Back', messages_path %>
+
+<%= link_to '<button type="button">Back</button>'.html_safe, messages_path %>
+
+<script>
+	// highlight the current page
+	var element = document.getElementById("4");
+	element.classList.add("active");
+</script>

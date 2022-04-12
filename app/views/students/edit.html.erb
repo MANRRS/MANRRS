@@ -2,5 +2,5 @@
 
 <%= render 'form', student: @student %>
 
-<%= link_to 'Show', @student %> |
-<%= link_to 'Back', students_path %>
+<%= link_to '<button type="button">Edit</button>'.html_safe, @student %> |
+<%= link_to '<button type="button">Back</button>'.html_safe, students_path %>

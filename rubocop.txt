@@ -1,0 +1,196 @@
+Inspecting 114 files
+C...CCCCCCCWCCCCCCCCCC..C....CC.................C........C..C.......C........CCCCCCC.....CC.W.....................
+
+Offenses:
+
+Gemfile:40:3: C: [Correctable] Bundler/OrderedGems: Gems should be sorted in an alphabetical order within their section of the Gemfile. Gem brakeman should appear before rspec-rails.
+  gem "brakeman"
+  ^^^^^^^^^^^^^^
+Gemfile:40:7: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  gem "brakeman"
+      ^^^^^^^^^^
+app/controllers/application_controller.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class ApplicationController.
+class ApplicationController < ActionController::Base
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/carriers_controller.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class CarriersController.
+class CarriersController < ApplicationController
+^^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/help_controller.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class HelpController.
+class HelpController < ApplicationController
+^^^^^^^^^^^^^^^^^^^^
+app/controllers/home_controller.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class HomeController.
+class HomeController < ApplicationController
+^^^^^^^^^^^^^^^^^^^^
+app/controllers/masterkeys_controller.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class MasterkeysController.
+class MasterkeysController < ApplicationController
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/message_histories_controller.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class MessageHistoriesController.
+class MessageHistoriesController < ApplicationController
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/message_histories_controller.rb:24:3: C: Metrics/MethodLength: Method has too many lines. [12/10]
+  def create ...
+  ^^^^^^^^^^
+app/controllers/message_histories_controller.rb:41:3: C: Metrics/MethodLength: Method has too many lines. [11/10]
+  def update ...
+  ^^^^^^^^^^
+app/controllers/messages_controller.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class MessagesController.
+class MessagesController < ApplicationController
+^^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/posttext_controller.rb:5:1: C: Style/Documentation: Missing top-level documentation comment for class PosttextController.
+class PosttextController < ApplicationController
+^^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/posttext_controller.rb:7:3: C: Metrics/AbcSize: Assignment Branch Condition size for posttext is too high. [<4, 20, 3> 20.62/17]
+  def posttext ...
+  ^^^^^^^^^^^^
+app/controllers/posttext_controller.rb:7:3: C: Metrics/MethodLength: Method has too many lines. [17/10]
+  def posttext ...
+  ^^^^^^^^^^^^
+app/controllers/posttext_controller.rb:9:5: C: Style/GuardClause: Use a guard clause (return unless params['textmsg']) instead of wrapping the code inside a conditional expression.
+    if params['textmsg']
+    ^^
+app/controllers/posttext_controller.rb:23:7: W: Lint/UselessAssignment: Useless assignment to variable - res.
+      res = system('python3 ./send_text.py /tmp/textmsg /tmp/cookie')
+      ^^^
+app/controllers/students_controller.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class StudentsController.
+class StudentsController < ApplicationController
+^^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/students_controller.rb:29:7: C: Naming/MethodName: Use snake_case for method names.
+  def deleteAll
+      ^^^^^^^^^
+app/controllers/students_imports_controller.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class StudentsImportsController.
+class StudentsImportsController < ApplicationController
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/user_controller.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class UserController.
+class UserController < Devise::RegistrationsController
+^^^^^^^^^^^^^^^^^^^^
+app/controllers/user_controller.rb:4:3: C: Metrics/AbcSize: Assignment Branch Condition size for create is too high. [<2, 46, 9> 46.91/17]
+  def create ...
+  ^^^^^^^^^^
+app/controllers/user_controller.rb:4:3: C: Metrics/MethodLength: Method has too many lines. [34/10]
+  def create ...
+  ^^^^^^^^^^
+app/controllers/user_controller.rb:4:3: C: Metrics/PerceivedComplexity: Perceived complexity for create is too high. [9/8]
+  def create ...
+  ^^^^^^^^^^
+app/helpers/application_helper.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for module ApplicationHelper.
+module ApplicationHelper
+^^^^^^^^^^^^^^^^^^^^^^^^
+app/helpers/carriers_helper.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for module CarriersHelper.
+module CarriersHelper
+^^^^^^^^^^^^^^^^^^^^^
+app/helpers/masterkeys_helper.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for module MasterkeysHelper.
+module MasterkeysHelper
+^^^^^^^^^^^^^^^^^^^^^^^
+app/helpers/message_histories_helper.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for module MessageHistoriesHelper.
+module MessageHistoriesHelper
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/helpers/messages_helper.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for module MessagesHelper.
+module MessagesHelper
+^^^^^^^^^^^^^^^^^^^^^
+app/helpers/students_helper.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for module StudentsHelper.
+module StudentsHelper
+^^^^^^^^^^^^^^^^^^^^^
+app/helpers/students_imports_helper.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for module StudentsImportsHelper.
+module StudentsImportsHelper
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/models/application_record.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class ApplicationRecord.
+class ApplicationRecord < ActiveRecord::Base
+^^^^^^^^^^^^^^^^^^^^^^^
+app/models/student.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class Student.
+class Student < ApplicationRecord
+^^^^^^^^^^^^^
+app/models/student.rb:7:7: C: Naming/MethodName: Use snake_case for method names.
+  def Phone_Number=(value)
+      ^^^^^^^^^^^^^
+app/models/student.rb:12:7: C: Naming/MethodName: Use snake_case for method names.
+  def stripWhitespace(s)
+      ^^^^^^^^^^^^^^^
+app/models/student.rb:12:23: C: Naming/MethodParameterName: Method parameter must be at least 3 characters long.
+  def stripWhitespace(s)
+                      ^
+app/models/student.rb:16:7: C: Naming/MethodName: Use snake_case for method names.
+  def stripNonIntegers(s)
+      ^^^^^^^^^^^^^^^^
+app/models/student.rb:16:24: C: Naming/MethodParameterName: Method parameter must be at least 3 characters long.
+  def stripNonIntegers(s)
+                       ^
+app/models/student.rb:20:7: C: Naming/MethodName: Use snake_case for method names.
+  def stripDigits(s)
+      ^^^^^^^^^^^
+app/models/student.rb:20:19: C: Naming/MethodParameterName: Method parameter must be at least 3 characters long.
+  def stripDigits(s)
+                  ^
+app/models/students_import.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class StudentsImport.
+class StudentsImport
+^^^^^^^^^^^^^^^^^^^^
+app/models/students_import.rb:47:3: C: Metrics/MethodLength: Method has too many lines. [11/10]
+  def save ...
+  ^^^^^^^^
+bin/bundle:24:3: C: Metrics/CyclomaticComplexity: Cyclomatic complexity for cli_arg_version is too high. [9/7]
+  def cli_arg_version ...
+  ^^^^^^^^^^^^^^^^^^^
+bin/bundle:24:3: C: Metrics/MethodLength: Method has too many lines. [11/10]
+  def cli_arg_version ...
+  ^^^^^^^^^^^^^^^^^^^
+bin/bundle:24:3: C: Metrics/PerceivedComplexity: Perceived complexity for cli_arg_version is too high. [9/8]
+  def cli_arg_version ...
+  ^^^^^^^^^^^^^^^^^^^
+bin/bundle:91:3: C: Metrics/MethodLength: Method has too many lines. [12/10]
+  def activate_bundler ...
+  ^^^^^^^^^^^^^^^^^^^^
+bin/bundle:104:121: C: Layout/LineLength: Line is too long. [198/120]
+    warn "Activating bundler (#{bundler_requirement}) failed:\n#{gem_error.message}\n\nTo install the version of bundler this project requires, run `gem install bundler -v '#{bundler_requirement}'`"
+                                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+config/application.rb:13:3: C: Style/Documentation: Missing top-level documentation comment for class TestApp::Application.
+  class Application < Rails::Application
+  ^^^^^^^^^^^^^^^^^
+config/environments/development.rb:5:1: C: Metrics/BlockLength: Block has too many lines. [26/25]
+Rails.application.configure do ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+config/initializers/devise.rb:17:121: C: Layout/LineLength: Line is too long. [154/120]
+  # config.secret_key = '4560deba7625bea00ab5559f60af474600a1c6071b2251528b42708c06b8bfbf54b1f7b1954129d0edc787de89fd952ee816f3a1eefbc53113aa2f2982fd9894'
+                                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+config/initializers/devise.rb:129:121: C: Layout/LineLength: Line is too long. [150/120]
+  # config.pepper = 'e684f654be02229a4eaa7f186608c74a81347d06787f55dad15f5b58dd96debefea27082b3db1a2b997300793209658fe70f6a075ec790e0198c7e31da4524b0'
+                                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+db/migrate/20220211025042_create_carriers.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class CreateCarriers.
+class CreateCarriers < ActiveRecord::Migration[6.1]
+^^^^^^^^^^^^^^^^^^^^
+db/migrate/20220211030659_devise_create_users.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class DeviseCreateUsers.
+class DeviseCreateUsers < ActiveRecord::Migration[6.1]
+^^^^^^^^^^^^^^^^^^^^^^^
+db/migrate/20220211202716_create_students.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class CreateStudents.
+class CreateStudents < ActiveRecord::Migration[6.1]
+^^^^^^^^^^^^^^^^^^^^
+db/migrate/20220212030205_create_messages.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class CreateMessages.
+class CreateMessages < ActiveRecord::Migration[6.1]
+^^^^^^^^^^^^^^^^^^^^
+db/migrate/20220213050316_create_message_histories.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class CreateMessageHistories.
+class CreateMessageHistories < ActiveRecord::Migration[6.1]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+db/migrate/20220408231706_create_masterkeys.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class CreateMasterkeys.
+class CreateMasterkeys < ActiveRecord::Migration[6.1]
+^^^^^^^^^^^^^^^^^^^^^^
+db/schema.rb:15:1: C: Metrics/BlockLength: Block has too many lines. [45/25]
+ActiveRecord::Schema.define(version: 20_220_408_231_706) do ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/requests/masterkeys_spec.rb:17:1: C: Metrics/BlockLength: Block has too many lines. [53/25]
+RSpec.describe '/masterkeys', type: :request do ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/routing/masterkeys_routing_spec.rb:5:1: C: Metrics/BlockLength: Block has too many lines. [26/25]
+RSpec.describe MasterkeysController, type: :routing do ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/unit/unit_spec.rb:64:1: W: Lint/DuplicateRequire: Duplicate require detected.
+require 'rails_helper'
+^^^^^^^^^^^^^^^^^^^^^^
+spec/unit/unit_spec.rb:69:121: C: Layout/LineLength: Line is too long. [151/120]
+    # described_class.new(email: 'narnia@gmail.com',password:'123456', encrypted_password:'123456', created_at: '2022-02-13', updated_at: '2022-02-13',
+                                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/unit/unit_spec.rb:89:1: W: Lint/DuplicateRequire: Duplicate require detected.
+require 'rails_helper'
+^^^^^^^^^^^^^^^^^^^^^^
+spec/unit/unit_spec.rb:92:1: C: Metrics/BlockLength: Block has too many lines. [34/25]
+RSpec.describe Student do ...
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+114 files inspected, 63 offenses detected, 2 offenses auto-correctable

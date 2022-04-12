@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
+# comment
 class HomeController < ApplicationController
   # before_action :authenticate_user!, only: %i[homepage]
-  def homepage
-  end
+  def homepage; end
 end

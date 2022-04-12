@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateMessageHistories < ActiveRecord::Migration[6.1]
   def change
     create_table :message_histories do |t|

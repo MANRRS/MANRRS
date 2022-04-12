@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 class StudentsImportsController < ApplicationController
+  before_action :authenticate_user!
   def new
     @students_import = StudentsImport.new
   end
@@ -11,5 +14,4 @@ class StudentsImportsController < ApplicationController
       render :new
     end
   end
-
 end
