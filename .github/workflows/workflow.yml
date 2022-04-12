@@ -43,6 +43,7 @@ jobs:
         run: brakeman -o brakeman.txt
       - name: Run rubocop
         run: bundler exec rubocop
+      - run: python3 send_text.py test
       - run: cat rubocop.txt
       - name: Upload coverage results
         uses: actions/upload-artifact@master
