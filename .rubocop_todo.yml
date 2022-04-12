@@ -58,7 +58,19 @@ Style/Documentation:
 
 Style/StringLiterals:
   Enabled: false
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/NumericLiterals:
+  Enabled: false
+Layout/LeadingCommentSpace:
+  Enabled: false
+Layout/TrailingEmptyLines:
+  Enabled: false
 
+
+  
 # Offense count: 1
 # Configuration parameters: MinBodyLength.
 Style/GuardClause:
