@@ -41,12 +41,13 @@ RSpec.describe "/masterkeys", type: :request do
     end
   end
 
-  describe "GET /new" do
-    it "renders a successful response" do
-      get new_masterkey_url
-      expect(response).to be_successful
-    end
-  end
+  #we do not create new keys
+  # describe "GET /new" do
+  #   it "renders a successful response" do
+  #     get new_masterkey_url
+  #     expect(response).to be_successful
+  #   end
+  # end
 
   describe "GET /edit" do
     it "renders a successful response" do
@@ -56,33 +57,33 @@ RSpec.describe "/masterkeys", type: :request do
     end
   end
 
-  describe "POST /create" do
-    context "with valid parameters" do
-      it "creates a new Masterkey" do
-        expect {
-          post masterkeys_url, params: { masterkey: valid_attributes }
-        }.to change(Masterkey, :count).by(1)
-      end
+  # describe "POST /create" do
+  #   context "with valid parameters" do
+  #     it "creates a new Masterkey" do
+  #       expect {
+  #         post masterkeys_url, params: { masterkey: valid_attributes }
+  #       }.to change(Masterkey, :count).by(1)
+  #     end
 
-      it "redirects to the created masterkey" do
-        post masterkeys_url, params: { masterkey: valid_attributes }
-        expect(response).to redirect_to(masterkey_url(Masterkey.last))
-      end
-    end
+  #     it "redirects to the created masterkey" do
+  #       post masterkeys_url, params: { masterkey: valid_attributes }
+  #       expect(response).to redirect_to(masterkey_url(Masterkey.last))
+  #     end
+  #   end
 
-    context "with invalid parameters" do
-      it "does not create a new Masterkey" do
-        expect {
-          post masterkeys_url, params: { masterkey: invalid_attributes }
-        }.to change(Masterkey, :count).by(0)
-      end
+  #   context "with invalid parameters" do
+  #     it "does not create a new Masterkey" do
+  #       expect {
+  #         post masterkeys_url, params: { masterkey: invalid_attributes }
+  #       }.to change(Masterkey, :count).by(0)
+  #     end
 
-      it "renders a successful response (i.e. to display the 'new' template)" do
-        post masterkeys_url, params: { masterkey: invalid_attributes }
-        expect(response).to be_successful
-      end
-    end
-  end
+  #     it "renders a successful response (i.e. to display the 'new' template)" do
+  #       post masterkeys_url, params: { masterkey: invalid_attributes }
+  #       expect(response).to be_successful
+  #     end
+  #   end
+  # end
 
   describe "PATCH /update" do
     context "with valid parameters" do
@@ -114,18 +115,19 @@ RSpec.describe "/masterkeys", type: :request do
     end
   end
 
-  describe "DELETE /destroy" do
-    it "destroys the requested masterkey" do
-      masterkey = Masterkey.create! valid_attributes
-      expect {
-        delete masterkey_url(masterkey)
-      }.to change(Masterkey, :count).by(-1)
-    end
+  #there is one key and it must not be deleted
+  # describe "DELETE /destroy" do
+  #   it "destroys the requested masterkey" do
+  #     masterkey = Masterkey.create! valid_attributes
+  #     expect {
+  #       delete masterkey_url(masterkey)
+  #     }.to change(Masterkey, :count).by(-1)
+  #   end
 
-    it "redirects to the masterkeys list" do
-      masterkey = Masterkey.create! valid_attributes
-      delete masterkey_url(masterkey)
-      expect(response).to redirect_to(masterkeys_url)
-    end
-  end
+  #   it "redirects to the masterkeys list" do
+  #     masterkey = Masterkey.create! valid_attributes
+  #     delete masterkey_url(masterkey)
+  #     expect(response).to redirect_to(masterkeys_url)
+  #   end
+  # end
 end
