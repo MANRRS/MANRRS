@@ -29,7 +29,7 @@ class StudentsImport
     spreadsheet = open_spreadsheet
     header = spreadsheet.row(1)
     (2..spreadsheet.last_row).map do |i|
-      row = Hash[[header, spreadsheet.row(i)].transpose]
+      row = [header, spreadsheet.row(i)].transpose.to_h
 
       # NOTE: Currently removing duplicates from Student_ID and not phone number
       student = Student.find_by_Phone_Number(row['Phone_Number']) || Student.new
