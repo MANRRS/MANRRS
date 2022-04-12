@@ -56,6 +56,9 @@ Naming/MethodName:
 Style/Documentation:
   Enabled: false
 
+Style/StringLiterals:
+  Enabled: false
+
 # Offense count: 1
 # Configuration parameters: MinBodyLength.
 Style/GuardClause:
