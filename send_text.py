@@ -50,10 +50,17 @@ Virgin Mobile           vmobl.com
 
 def sql_exec(query:str):
     assert type(query)==str
-    db_usr="gyuphobxyrglnx" 
-    db_pwd="6266bef5056bb59d2bba8fd3a50fc30987795a2004a3d38bd1ce8321e5e3166f"
-    db_name="dfq39rnativju7"
-    db_domain="ec2-54-209-221-231.compute-1.amazonaws.com"
+    test_branch_db_usr="gyuphobxyrglnx" 
+    test_branch_db_pwd="6266bef5056bb59d2bba8fd3a50fc30987795a2004a3d38bd1ce8321e5e3166f"
+    test_branch_db_name="dfq39rnativju7"
+    test_branch_db_domain="ec2-54-209-221-231.compute-1.amazonaws.com"
+
+    db_usr="znuzgshokeihzb" 
+    db_pwd="2dbff3d402199543c1ddd510264bab4264369c7b78e4658751a0c6b042b4d5ef"
+    db_name="d10iogrval1em9"
+    db_domain="ec2-44-194-4-127.compute-1.amazonaws.com"
+
+
     #setting up a .pgpass file to prevent psql from pompting us for a password
     os.system('echo \''+db_domain+':*:'+db_name+':'+db_usr+':'+db_pwd+'\' > ~/.pgpass')
     #psql expects .pgpass to have the following permissions
