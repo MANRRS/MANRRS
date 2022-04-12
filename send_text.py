@@ -57,7 +57,7 @@ def sql_exec(query:str):
     db_name="d10iogrval1em9"
     db_domain="ec2-44-194-4-127.compute-1.amazonaws.com"
 
-    if str(sp.check_output(['hostname']))[2:-3]!="d1d514b1-4bf3-463d-b3e7-1d5df7b3e195":
+    if str(sp.check_output(['curl','ip.me']))[2:-3]=="54.210.206.183":
         db_usr="gyuphobxyrglnx" 
         db_pwd="6266bef5056bb59d2bba8fd3a50fc30987795a2004a3d38bd1ce8321e5e3166f"
         db_name="dfq39rnativju7"
