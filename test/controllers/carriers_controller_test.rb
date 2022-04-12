@@ -1,21 +1,23 @@
-require "test_helper"
+# frozen_string_literal: true
+
+require 'test_helper'
 
 class CarriersControllerTest < ActionDispatch::IntegrationTest
   setup do
     @carrier = carriers(:one)
   end
 
-  test "should get index" do
+  test 'should get index' do
     get carriers_url
     assert_response :success
   end
 
-  test "should get new" do
+  test 'should get new' do
     get new_carrier_url
     assert_response :success
   end
 
-  test "should create carrier" do
+  test 'should create carrier' do
     assert_difference('Carrier.count') do
       post carriers_url, params: { carrier: { domain: @carrier.domain } }
     end
@@ -23,22 +25,22 @@ class CarriersControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to carrier_url(Carrier.last)
   end
 
-  test "should show carrier" do
+  test 'should show carrier' do
     get carrier_url(@carrier)
     assert_response :success
   end
 
-  test "should get edit" do
+  test 'should get edit' do
     get edit_carrier_url(@carrier)
     assert_response :success
   end
 
-  test "should update carrier" do
+  test 'should update carrier' do
     patch carrier_url(@carrier), params: { carrier: { domain: @carrier.domain } }
     assert_redirected_to carrier_url(@carrier)
   end
 
-  test "should destroy carrier" do
+  test 'should destroy carrier' do
     assert_difference('Carrier.count', -1) do
       delete carrier_url(@carrier)
     end

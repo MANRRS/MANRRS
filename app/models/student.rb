@@ -8,7 +8,7 @@ class Student < ApplicationRecord
     value = stripDigits(stripNonIntegers(value.to_s)).to_i
     super(value)
   end
-  
+
   def stripWhitespace(s)
     s.gsub(/\s+/, '')
   end

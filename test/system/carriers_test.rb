@@ -1,43 +1,45 @@
-require "application_system_test_case"
+# frozen_string_literal: true
+
+require 'application_system_test_case'
 
 class CarriersTest < ApplicationSystemTestCase
   setup do
     @carrier = carriers(:one)
   end
 
-  test "visiting the index" do
+  test 'visiting the index' do
     visit carriers_url
-    assert_selector "h1", text: "Carriers"
+    assert_selector 'h1', text: 'Carriers'
   end
 
-  test "creating a Carrier" do
+  test 'creating a Carrier' do
     visit carriers_url
-    click_on "New Carrier"
+    click_on 'New Carrier'
 
-    fill_in "Domain", with: @carrier.domain
-    click_on "Create Carrier"
+    fill_in 'Domain', with: @carrier.domain
+    click_on 'Create Carrier'
 
-    assert_text "Carrier was successfully created"
-    click_on "Back"
+    assert_text 'Carrier was successfully created'
+    click_on 'Back'
   end
 
-  test "updating a Carrier" do
+  test 'updating a Carrier' do
     visit carriers_url
-    click_on "Edit", match: :first
+    click_on 'Edit', match: :first
 
-    fill_in "Domain", with: @carrier.domain
-    click_on "Update Carrier"
+    fill_in 'Domain', with: @carrier.domain
+    click_on 'Update Carrier'
 
-    assert_text "Carrier was successfully updated"
-    click_on "Back"
+    assert_text 'Carrier was successfully updated'
+    click_on 'Back'
   end
 
-  test "destroying a Carrier" do
+  test 'destroying a Carrier' do
     visit carriers_url
     page.accept_confirm do
-      click_on "Destroy", match: :first
+      click_on 'Destroy', match: :first
     end
 
-    assert_text "Carrier was successfully destroyed"
+    assert_text 'Carrier was successfully destroyed'
   end
 end

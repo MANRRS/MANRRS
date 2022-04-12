@@ -1,22 +1,23 @@
+# frozen_string_literal: true
+
 class UserController < Devise::RegistrationsController
   def create
-    puts "ZZZZZZZZZ: UserController.create()"
+    puts 'ZZZZZZZZZ: UserController.create()'
 
     if params['key']
-      puts "ZZZZZZZZZ: key recieved"
-      key=params['key']
-      puts key 
+      puts 'ZZZZZZZZZ: key recieved'
+      key = params['key']
+      puts key
 
-      real_key_string=Masterkey.find_by_sql("select key from masterkeys")[0].key
-      print "ZZZZZZZ: ", real_key_string,"\n"
-
+      real_key_string = Masterkey.find_by_sql('select key from masterkeys')[0].key
+      print 'ZZZZZZZ: ', real_key_string, "\n"
 
       if key != real_key_string
-        puts "ZZZZZZZZZ: incorrect key"
+        puts 'ZZZZZZZZZ: incorrect key'
         redirect_to '/users/sign_up?error=1'
-        return 
+        return
       end
-    
+
       build_resource(sign_up_params)
 
       resource.save
@@ -37,10 +38,9 @@ class UserController < Devise::RegistrationsController
         respond_with resource
       end
 
-      return 
     else
       redirect_to '/users/sign_up?error=1'
-      return
     end
+    nil
   end
 end
