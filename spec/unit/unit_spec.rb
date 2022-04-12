@@ -109,10 +109,10 @@ RSpec.describe Student do
       expect(student).not_to be_valid
     end
 
-    it 'Is not valid without phone number' do
-      student = Student.new(Phone_Number: nil)
-      expect(student).not_to be_valid
-    end
+    # it 'Is not valid without phone number' do
+    #   student = Student.new(Phone_Number: nil)
+    #   expect(student).not_to be_valid
+    # end
 
     it 'Is not valid without email' do
       student = Student.new(Email: nil)
