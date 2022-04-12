@@ -17,6 +17,11 @@
 
               <div class="mb-md-5 mt-md-4 pb-5">
                 <!-- <div id = Myid style='display: none'> -->
+                <div name = "error"></div>
+                <script>
+                  // hide navigation 
+                  document.getElementById("showNav").style.display = 'none';
+                </script>
                 <h2 class="fw-bold mb-2 text-uppercase">Sign Up</h2>
                 <p class="text-white-50 mb-5">Please create your login and password!</p>
 
@@ -50,11 +55,14 @@
                     Master Key<br>                    
                     <input type="text" name="key" required>
                   </div>
+                                    
+                  <br>
+
 
                   <script>
                     if(window.location.search.substr(1).split("=")[0]=="error"){
-                      let form=document.getElementsByName("form123")[0]
-                      form.appendChild(document.createTextNode("invalid key"))
+                      let form=document.getElementsByName("error")[0]
+                      form.appendChild(document.createTextNode("\n invalid key"))
                     }
                   </script>
 
