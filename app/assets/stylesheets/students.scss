@@ -9,8 +9,9 @@
     --header-height: 3rem;
     --nav-width: 68px;
     --first-color: #b79945;
-    --secondary-color: #c99738; // #a5782b;    
-    --first-color-light: #AFA5D9;
+    --secondary-color: #c99738; // #a5782b;
+    --maroon-color: #500000;    
+    --first-color-light: #000000;
     --white-color: #F7F6FB;
     --body-font: 'Nunito', sans-serif;
     --normal-font-size: 1rem;
@@ -219,5 +220,11 @@ a {
     background: linear-gradient(to right, var(--first-color), var(--secondary-color));
 
   }
+
+
+.centerLogo {
+    margin: auto;
+}
+  
 
   
