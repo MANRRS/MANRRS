@@ -11,8 +11,8 @@ def send_email(receivers:[str],text:str):
     assert type(receivers[0])==str
     assert len(text)<160
     with smtplib.SMTP_SSL("smtp.gmail.com",465) as smtp:
-        sender=os.environ["EMAIL"]#"manrrs.outreach@gmail.com"
-        smtp.login(sender,os.environ["EMAIL_PW"])#"shbchjsacb7382y2%")
+        sender=os.environ["EMAIL"]
+        smtp.login(sender,os.environ["EMAIL_PW"])
         msg="Subject: _ \n\n"+text
         smtp.sendmail(sender,receivers,msg)
 
