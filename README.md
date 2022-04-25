@@ -1,27 +1,25 @@
-# README
+How to execute our code: 
+    bundle install
 
-The testing for this project was done manually because testing is not possible locally since we use python to edit the sql database that ruby on rails uses.
-As a result our Unit testing, and Integration Testing files are commented out, and we do our testing in python. Simple Cov currently shows 100 percent due to those changes.	
+    Instantiate the database:
+    rails db:create
+    rails db:migrate
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+    Run the app
+    rails server --binding=0.0.0.0
 
-Things you may want to cover:
+How to deploy code in Heroku:
+    1) Install git and the heroku cli
+    2) Create a herokue remote
+    3) The heroku create CLI command creates a new empty application on Heroku, along with an associated empty Git re pository. 
+    4) Deploy code. To deploy your app to Heroku, use the git push command to push the code from your local repository’s main branch to your heroku remote. For example:
 
-* Ruby version
+CI/CD process: 
+    File called workflows.yml which is a shell script,runs all our tasks. We can do the testing by running rails rspec.
+    Everytime we would push code to github repository, it automatically deploy to heroku before heroku was hacked.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Any other details for maintaince and checking:
+    Need to run rubocop in order to check the style.
+    Need to brakeman for static analysis
+    Whenever new code is pushed, it will be automatically updated on heroku.
+    
