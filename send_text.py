@@ -53,7 +53,7 @@ Virgin Mobile           vmobl.com
 def sql_exec(query:str):
     assert type(query)==str
 
-    db_usr="postgress"
+    db_usr="postgres"
     db_pwd="password"
     db_domain="localhost"
     db_name="test"
