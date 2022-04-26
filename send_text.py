@@ -49,33 +49,24 @@ Verizon Wireless        vtext.com
 Virgin Mobile           vmobl.com   
 """ 
 
-#main app
-#DATABASE_URL=postgres://znuzgshokeihzb:2dbff3d402199543c1ddd510264bab4264369c7b78e4658751a0c6b042b4d5ef@ec2-44-194-4-127.compute-1.amazonaws.com:5432/d10iogrval1em9
-#test app
-#DATABASE_URL=postgres://gyuphobxyrglnx:6266bef5056bb59d2bba8fd3a50fc30987795a2004a3d38bd1ce8321e5e3166f@ec2-54-209-221-231.compute-1.amazonaws.com:5432/dfq39rnativju7
 
 def sql_exec(query:str):
     assert type(query)==str
 
-    url="postgres://znuzgshokeihzb:2dbff3d402199543c1ddd510264bab4264369c7b78e4658751a0c6b042b4d5ef@ec2-44-194-4-127.compute-1.amazonaws.com:5432/d10iogrval1em9"
+    db_usr="postgress"
+    db_pwd="password"
+    db_domain="localhost"
+    db_name="test"
+
+    # url="postgres://znuzgshokeihzb:2dbff3d402199543c1ddd510264bab4264369c7b78e4658751a0c6b042b4d5ef@ec2-44-194-4-127.compute-1.amazonaws.com:5432/d10iogrval1em9"
     if 'DATABASE_URL' in os.environ:
         url=os.environ['DATABASE_URL']
-    arr=url.split(":")[1:]
-    db_usr=arr[0][2:]
-    db_pwd,db_domain=arr[1].split("@")
-    db_port,db_name=arr[2].split("/")
+        arr=url.split(":")[1:]
+        db_usr=arr[0][2:]
+        db_pwd,db_domain=arr[1].split("@")
+        db_port,db_name=arr[2].split("/")
 
-    # db_usr="znuzgshokeihzb" 
-    # db_pwd="2dbff3d402199543c1ddd510264bab4264369c7b78e4658751a0c6b042b4d5ef"
-    # db_name="d10iogrval1em9"
-    # db_domain="ec2-44-194-4-127.compute-1.amazonaws.com"
-
-    # if str(sp.check_output(['curl','ip.me']))[2:-3]=="54.210.206.183":
-    #     db_usr="gyuphobxyrglnx" 
-    #     db_pwd="6266bef5056bb59d2bba8fd3a50fc30987795a2004a3d38bd1ce8321e5e3166f"
-    #     db_name="dfq39rnativju7"
-    #     db_domain="ec2-54-209-221-231.compute-1.amazonaws.com"
-
+    
 
 
     #setting up a .pgpass file to prevent psql from pompting us for a password
