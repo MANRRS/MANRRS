@@ -58,7 +58,6 @@ def sql_exec(query:str):
     db_domain="localhost"
     db_name="test_app_test"
 
-    # url="postgres://znuzgshokeihzb:2dbff3d402199543c1ddd510264bab4264369c7b78e4658751a0c6b042b4d5ef@ec2-44-194-4-127.compute-1.amazonaws.com:5432/d10iogrval1em9"
     if 'DATABASE_URL' in os.environ:
         url=os.environ['DATABASE_URL']
         arr=url.split(":")[1:]
