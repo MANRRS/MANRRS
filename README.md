@@ -13,7 +13,7 @@ This code has been run and tested on:
 * Rails - 6.1.4.1
 * Ruby Gems - Listed in `Gemfile`
 * PostgreSQL - 13.3 
-* Python3- 3.14
+* Python- 3.14
 
 
 ## External Deps  ##
