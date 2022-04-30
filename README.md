@@ -39,6 +39,12 @@ Any other details for maintaince and checking:
     
 
 ## Execute Code ##
+Run the following commands in windows Powershell or the terminal for Linux and Mac
+cd csce431
+cd messages_app
+docker run --rm -it --volume "$(pwd):/csce431/messages_app" -e DATABASE_USER=test_app -e DATABASE_PASSWORD=test_password -p 3000:3000 dmartinez05/ruby_rails_postgresql:latest
+cd csce431
+cd messages_app
 
 How to execute our code: 
     
