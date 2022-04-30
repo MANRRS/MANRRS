@@ -101,4 +101,8 @@ CI/CD process:
 Admins looking for support should first look at the application help page.
 Users looking for help seek out assistance from the customer.
 
+## Extra Helps ##
+Contact  paulinewade@tamu.edu for any help and additional information if needed.
+
+
 
