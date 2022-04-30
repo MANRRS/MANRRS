@@ -4,7 +4,7 @@ CSCE 431 Group 500-12 Project
 
 ## Introduction ##
 
-Mannrs is an application that is created for Mannrs outreach organization. The goal of this application is for the admins to be able to send messages to every member in the organization. This application uses a text messaging system to send messages. When a new user tries to register, it will ask for a secret key that only the admins know to ensure that only the admins in the organization can register. The user can either manually type a number of a member or upload an excel file containing multiple numbers to upload numbers of multiple people at once. 
+MANRRS outreach is an application that is created for MANRRS organization. The goal of this application is for the admins to be able to send messages to every member in the organization. This application uses a text messaging system to send messages. When a new user tries to register, it will ask for a secret key that only the admins know to ensure that only the admins in the organization can register. The user can either manually type a number of a member or upload an excel file containing multiple numbers to upload numbers of multiple people at once. 
 ## Requirements ##
 
 This code has been run and tested on:
