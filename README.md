@@ -50,12 +50,15 @@ cd messages_app
 How to execute our code: 
     
     bundle install  
+
+```bash
     rails db:create
     rails db:migrate
-
+```
     Run the app
+```bash
     rails server --binding=0.0.0.0
-
+```
 The application can be seen using a browser and navigating to http://localhost:3000/
 
 ## Environmental Variables/Files ##
