@@ -65,9 +65,13 @@ The application can be seen using a browser and navigating to http://localhost:3
 
 ** Add instructions/description if your application requires it.
 
+```bash
+DATABASE_USER=test_app 
+DATABASE_PASSWORD=test_password
+```
 ## Deployment ##
 
-** Add instructions about how to deploy to Heroku
+
 How to deploy code in Heroku:
    1) Install git and the heroku cli
    2) Create a herokue remote
