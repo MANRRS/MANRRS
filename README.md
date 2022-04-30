@@ -38,8 +38,8 @@ Any other details for maintaince and checking:
 ## Execute Code ##
 
 How to execute our code: 
-    bundle install
     
+    bundle install  
     rails db:create
     rails db:migrate
 
