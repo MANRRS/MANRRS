@@ -66,8 +66,8 @@ The application can be seen using a browser and navigating to http://localhost:3
 ** Add instructions/description if your application requires it.
 
 ```bash
-DATABASE_USER=test_app 
-DATABASE_PASSWORD=test_password
+export DATABASE_USER=test_app 
+export DATABASE_PASSWORD=test_password
 ```
 ## Deployment ##
 
