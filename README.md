@@ -13,7 +13,8 @@ This code has been run and tested on:
 * Rails - 6.1.4.1
 * Ruby Gems - Listed in `Gemfile`
 * PostgreSQL - 13.3 
-* Python - 3.14
+* Nodejs - v16.9.1
+* Yarn - 1.22.11
 
 
 ## External Deps  ##
@@ -32,10 +33,13 @@ Download this code repository by using git:
 ## Tests ##
 
 Any other details for maintaince and checking:
-    Need to run rubocop in order to check the style.
-    Need to brakeman for static analysis
-    Whenever new code is pushed, it will be automatically updated on heroku.
-    
+```bash
+rspec . #run tests
+rubocop #check code style
+brakeman #static analysis
+python3 send_text.py test #test the python code 
+```
+Whenever new code is pushed, it will be automatically updated on heroku.
 
 ## Execute Code ##
 Run the following commands in windows Powershell or the terminal for Linux and Mac
@@ -62,8 +66,6 @@ The application can be seen using a browser and navigating to http://localhost:3
 
 ## Environmental Variables/Files ##
 
-** Add instructions/description if your application requires it.
-
 ```bash
 export DATABASE_USER=test_app 
 export DATABASE_PASSWORD=test_password
@@ -72,20 +74,11 @@ export DATABASE_PASSWORD=test_password
 
 
 How to deploy code in Heroku:
+   1) Install git and the heroku cli
+   2) Create a herokue remote
+   3) The heroku create CLI command creates a new empty application on Heroku, along with an associated empty Git re pository. 
+   4) Deploy code. To deploy your app to Heroku, use the git push command to push the code from your local repository’s main branch to your heroku remote. For example:
 
-1)Install git and the heroku cli
-
-2)Fork the project repository (https://github.com/MANRRS/MANRRS) into your own GitHub account.
-
-3)Make sure to connect the github account to the heroku account.
-
-4)The heroku create CLI command creates a new empty application on Heroku, along with an associated empty Git repository.
-
-5)Go to the dashboard and click the New button and create a pipeline.
-
-6)Create a new app under production and deploy from the main branch from github.
-
-7)Finally make sure to configure all the environment variables above and the website can be accessed through the heroku link.
 
 ## CI/CD ##
 
