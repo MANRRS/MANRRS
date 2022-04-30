@@ -64,9 +64,10 @@ rails server --binding=0.0.0.0
 ```
 The application can be seen using a browser and navigating to http://localhost:3000/
 
-## Environmental Variables/Files ##
+## Environment Variables/Files ##
 
 ```bash
+export RAILS_ENV=production
 export DATABASE_USER=test_app 
 export DATABASE_PASSWORD=test_password
 ```
