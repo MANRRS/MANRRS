@@ -102,7 +102,7 @@ Admins looking for support should first look at the application help page.
 Users looking for help seek out assistance from the customer.
 
 ## Extra Helps ##
-Contact Proffessor Pauline Wade paulinewade@tamu.edu for any help and additional information if needed.
+Contact professor Pauline Wade paulinewade@tamu.edu for any help and additional information if needed.
 
 
 
