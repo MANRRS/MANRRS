@@ -39,8 +39,7 @@ Any other details for maintaince and checking:
 
 How to execute our code: 
     bundle install
-
-    Instantiate the database:
+    
     rails db:create
     rails db:migrate
 
