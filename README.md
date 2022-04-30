@@ -85,7 +85,7 @@ How to deploy code in Heroku:
 
 6)Create a new app under production and deploy from the main branch from github.
 
-7)Make sure to configure all the environment variables above and the website can can accessed through the heroku link.
+7)Finally make sure to configure all the environment variables above and the website can be accessed through the heroku link.
 
 ## CI/CD ##
 
