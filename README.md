@@ -94,7 +94,7 @@ How to deploy code in Heroku:
 
 CI/CD process: 
     There is a file called .github/workflows.yml which is a like a shell script that runs all our tasks automatically whenever someone pushes to the repository. 
-    Everytime we pushed code to github repository, it automatically deployed to heroku before heroku was hacked.
+    Everytime we pushed code to the github repository, it automatically deployed to heroku before heroku was hacked.
 
 https://github.com/MANRRS/MANRRS/actions
 
