@@ -13,8 +13,7 @@ This code has been run and tested on:
 * Rails - 6.1.4.1
 * Ruby Gems - Listed in `Gemfile`
 * PostgreSQL - 13.3 
-* Nodejs - v16.9.1
-* Yarn - 1.22.11
+* Python3- 3.14
 
 
 ## External Deps  ##
