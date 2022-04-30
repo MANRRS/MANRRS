@@ -56,10 +56,10 @@ The application can be seen using a browser and navigating to http://localhost:3
 
 ** Add instructions about how to deploy to Heroku
 How to deploy code in Heroku:
-    1) Install git and the heroku cli
-    2) Create a herokue remote
-    3) The heroku create CLI command creates a new empty application on Heroku, along with an associated empty Git re pository. 
-    4) Deploy code. To deploy your app to Heroku, use the git push command to push the code from your local repository’s main branch to your heroku remote. For example:
+   1) Install git and the heroku cli
+   2) Create a herokue remote
+   3) The heroku create CLI command creates a new empty application on Heroku, along with an associated empty Git re pository. 
+   4) Deploy code. To deploy your app to Heroku, use the git push command to push the code from your local repository’s main branch to your heroku remote. For example:
 
 
 ## CI/CD ##
